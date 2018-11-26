@@ -1,0 +1,7 @@
+#script for listing the file name and the number of hits within the file 
+
+for table in table.TransporterHits/*.out
+do 
+	count=`cat $table | grep -v '\#' | wc -l` 
+	echo $table has $count hits
+done
